@@ -1,6 +1,6 @@
 # Pileup weights 2018 (ReReco)
 
-PileupWeight_Run2018ABCD_DeepCSV_mix_2018_25ns_JuneProjectionFull18.root
+[PileupWeight_Run2018ABCD_DeepCSV_mix_2018_25ns_JuneProjectionFull18.root](PileupWeight_Run2018ABCD_DeepCSV_mix_2018_25ns_JuneProjectionFull18.root)
 
 # Validation plots
 
