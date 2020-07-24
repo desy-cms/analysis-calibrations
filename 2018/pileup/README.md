@@ -4,36 +4,11 @@ The recommended pileup weight file to be used in the configuration file for the 
 ```
 calibrations/2018/pileup/PileupWeight_Run2018ABCD_DeepCSV_mix_2018_25ns_JuneProjectionFull18.root
 ```
-
-* [Validation plots](#validation-plots)
-* [How to produce pileup weights](#how-to-produce-pileup-weights)
-
-## Validation plots
-
-### Pileup weights
-
 Linear             |  Log
 :-------------------------:|:-------------------------:
 ![](pileup_weight_lin.png?raw=true) | ![](pileup_weight_log.png?raw=true)
 
 
-### Data versus MC
-
-Linear             |  Log
-:-------------------------:|:-------------------------:
-![](pileup_data_mc_lin.png?raw=true) | ![](pileup_data_mc_log.png?raw=true)
-
-
-
-
-### Monte Carlo datasets
-
-Signal MC versus mixing configuration | Madgraph QCD MC versus mixing configuration | Madgraph QCD bEnriched MC versus mixing configuration | Madgraph QCD BGenFilter MC versus mixing configuration
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![](mc/pileup_plots_signal.png?raw=true) | ![](mc/pileup_plots_qcd.png?raw=true) | ![](mc/pileup_plots_qcd_benriched.png?raw=true) | ![](mc/pileup_plots_qcd_bgenfilter.png?raw=true)
-
-
-----
 
 ## How to produce pileup weights
 
@@ -80,3 +55,48 @@ MyDataPileupHistogram_Run2018ABCD_DeepCSV.root
 * The analysis certified JSON file is expected to be available in `Analysis/Tools/data/calibrations/2018/certified`
 * The central pileup file (inputLumiJSON) is provided by CMS [here](https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupJSONFileforData#Location_of_central_pileup_files)
 * The recommended value for minimum bias cross section and its uncertainties are provided by CMS [here](https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupJSONFileforData#Recommended_cross_section)
+
+The result nominal data pileup profile with systematic variations, ±1 and ±2 standard deviations, for MSSM Hbb 2018 Analysis
+
+![](data/pileup_data_2018.png?raw=true)
+
+### Monte Carlo pileup profile
+
+If Monte Carlo production configuration is fine, then the profile from the mixing configuration should be enough for any MC dataset.
+
+It may happen that some MC production uses different pileup configurations. If that happens the pileup weighting must be sample dependent.
+
+For 2018 we tested all relevant MC samples we use and it turns out that the profile from the mix module suffices.
+
+#### Producing MC pileup distributions
+
+**TO DO**
+
+##### Signal MC versus mixing configuration
+
+![](mc/pileup_plots_signal.png?raw=true)
+
+##### Madgraph QCD MC versus mixing configuration
+
+![](mc/pileup_plots_qcd.png?raw=true)
+
+##### Madgraph QCD bEnriched MC versus mixing configuration
+
+![](mc/pileup_plots_qcd_benriched.png?raw=true)
+
+##### Madgraph QCD BGenFilter MC versus mixing configuration
+
+![](mc/pileup_plots_qcd_bgenfilter.png?raw=true)
+
+### Data versus MC
+
+MC is from mixing configuration
+
+![](pileup_data_mc_lin.png?raw=true)
+
+<!--
+Linear             |  Log
+:-------------------------:|:-------------------------:
+![](pileup_data_mc_lin.png?raw=true) | ![](pileup_data_mc_log.png?raw=true)
+
+-->
