@@ -1,3 +1,5 @@
+# analysis-calibrations
+
 **This repository contains the relevant information on calibrations for analyses.**
 
 ## Framework installation
@@ -28,6 +30,8 @@ mkdir pileup/data
 mkdir pileup/mc
 ```
 
-### Add information
+### Add calibrations
 
-Add the relevant information from official sources in the directories above. Commit your changes and, if needed, make a pull request.
+Add the relevant files in the corresponding  directories. Commit your changes and, if needed, make a pull request.
+
+For more detailed information see the README files in the subdirectories of thes package.
