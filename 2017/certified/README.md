@@ -10,7 +10,7 @@
 
 **MSSM Hbb triggers available**
 
-Cert_Run2017CDEF_13TeV_UL2017_Collisions17_GoldenJSON.txt
+- Cert_Run2017CDEF_13TeV_UL2017_Collisions17_GoldenJSON.txt
 
 #### Split eras
 
