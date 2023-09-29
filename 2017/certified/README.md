@@ -8,6 +8,16 @@
 This is the list of certified lumisections for the full era provided by CMS <br>
 https://cms-service-dqmdc.web.cern.ch/CAF/certification/Collisions17/13TeV/Legacy_2017/
 - `Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.txt`
+  - Luminosity: `38963 /pb`
+
+where luminosity is calculated from
+```bash
+brilcalc lumi \
+-c web \
+-u /pb \
+--normtag /cvmfs/cms-bril.cern.ch/cms-lumi-pog/Normtags/normtag_PHYSICS.json \
+-i certified/Cert_Run2017CDEF_13TeV_UL2017_Collisions17_GoldenJSON.txt
+```
 
 ### Eras C to F
 
@@ -17,9 +27,11 @@ Because the triggers were not available for the full era, below is a compilation
 
 The first JSON file is to be used for the semileptonic analysis. The second one is for the full hadronic analysis, for it contains only the certified lumisections when the `L1_DoubleJet100er2p3_dEta_Max1p6` seed was not prescaled to zero (see how this is done [here](https://github.com/desy-cms/analysis-tools#active-l1-seeds)).
 - `Cert_Run2017CDEF_13TeV_UL2017_Collisions17_GoldenJSON.txt`
+  - Luminosity: `36264 /pb`
 - `Cert_Run2017CDEF_13TeV_UL2017_Collisions17_GoldenJSON_L1_DoubleJet100etc_Active.txt`
+  - Luminosity: `31145 /pb`
 
-In your analysis cfg file for SL analysis use this line
+In the analysis cfg file for SL analysis use this line
 ```
 json = tools:2017/certified/Cert_Run2017CDEF_13TeV_UL2017_Collisions17_GoldenJSON.txt
 ```
