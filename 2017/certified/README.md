@@ -19,25 +19,26 @@ brilcalc lumi \
 -i certified/Cert_Run2017CDEF_13TeV_UL2017_Collisions17_GoldenJSON.txt
 ```
 
-### Eras C to F
-
-**MSSM Hbb triggers available**
+### Eras 2017C to 2017F
 
 Because the triggers were not available for the full era, below is a compilation of the certified lumisections when MSSM Hbb triggers were available. To do that, CMSS tools for manipulation lumi json files were used (see [here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideGoodLumiSectionsJSONFile#filterJSON_py) for more details)
 
-The first JSON file is to be used for the semileptonic analysis. The second one is for the full hadronic analysis, for it contains only the certified lumisections when the `L1_DoubleJet100er2p3_dEta_Max1p6` seed was not prescaled to zero (see how this is done [here](https://github.com/desy-cms/analysis-tools#active-l1-seeds)).
-- `Cert_Run2017CDEF_13TeV_UL2017_Collisions17_GoldenJSON.txt`
-  - Luminosity: `36264 /pb`
-- `Cert_Run2017CDEF_13TeV_UL2017_Collisions17_GoldenJSON_L1_DoubleJet100etc_Active.txt`
-  - Luminosity: `31145 /pb`
+#### Full hadronic
+
+The json `Cert_Run2017CDEF_13TeV_UL2017_Collisions17_GoldenJSON_L1_DoubleJet100etc_Active.txt` is for the full hadronic analysis, for it contains only the certified lumisections when the `L1_DoubleJet100er2p3_dEta_Max1p6` seed was not prescaled to zero, i.e. prescale = 1 (see how this is done [here](https://github.com/desy-cms/analysis-tools#active-l1-seeds)). The luminosity for these lumisections is `31145 /pb`.
+
+For the FH analysis cfg use the following
+```
+json = tools:2017/certified/Cert_Run2017CDEF_13TeV_UL2017_Collisions17_GoldenJSON_L1_DoubleJet100etc_Active.txt
+```
+
+#### Semileptonic
+
+Because the semileptonic was not affected by any prescale it has a different set of certified lumisections given in the file `Cert_Run2017CDEF_13TeV_UL2017_Collisions17_GoldenJSON.txt` with corresponding luminosity `36264 /pb`.
 
 In the analysis cfg file for SL analysis use this line
 ```
 json = tools:2017/certified/Cert_Run2017CDEF_13TeV_UL2017_Collisions17_GoldenJSON.txt
-```
-or, for FH analysis, use
-```
-json = tools:2017/certified/Cert_Run2017CDEF_13TeV_UL2017_Collisions17_GoldenJSON_L1_DoubleJet100etc_Active.txt
 ```
 
 #### Split eras
@@ -52,6 +53,7 @@ In case one needs to study specific eras
 
 ## ReReco
 
+The certified luminosity for the ReReco campaign
 - `Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON.txt`
 
 
